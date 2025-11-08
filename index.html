@@ -5,13 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Entreprise</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    h1 { color: #e03b2d; }
-    p { font-size: 18px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #e03b2d; color: white; padding: 20px 0; text-align: center; }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section { padding: 50px 20px; text-align: center; }
+    h2 { color: #e03b2d; margin-bottom: 20px; }
+    p { font-size: 18px; max-width: 600px; margin: 0 auto 20px auto; }
+    footer { background-color: #333; color: white; padding: 20px 0; text-align: center; }
+    input, textarea { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { padding: 10px 20px; background-color: #e03b2d; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #c32b1f; }
   </style>
 </head>
 <body>
-  <h1>Bienvenue sur le site de mon entreprise 🚀</h1>
-  <p>Notre site est en construction. Bientôt, vous pourrez découvrir nos services !</p>
-</body>
-</html>
+
+  <header>
+    <h1>Bienvenue sur le site de mon entreprise 🚀</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="accueil">
+    <h2>Accueil</h2>
+    <p>Notre site est en construction. Bientôt, vous pourrez découvrir nos services et toutes nos offres. Restez connectés !</p>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <p>Nous pro
