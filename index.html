@@ -4,96 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Entreprise</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
- :root {
-  --dark-bg: #111111;
-  --dark-bg-alt: #1a1a1a;
-  --accent: #e03b2d;
-  --text-light: #ffffff;
-  --text: #f5f5f5;
-  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+    :root {
+      --dark-bg: #111111;
+      --dark-bg-alt: #1a1a1a;
+      --accent: #e03b2d;
+      --text-light: #ffffff;
+      --text: #f5f5f5;
+      --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--dark-bg);
-  color: var(--text);
-  font-family: var(--font-main);
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
 
-header {
-  background-color: var(--dark-bg-alt);
-  padding: 20px 0;
-  text-align: center;
-}
+    /* Top-bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: var(--dark-bg-alt);
+    }
 
-nav a {
-  color: var(--text-light);
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
+    .top-bar .logo {
+      height: 50px;
+    }
 
-nav a:hover {
-  color: var(--accent);
-}
+    .top-bar .social-icons a {
+      color: var(--text-light);
+      margin-left: 15px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
 
-main {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    .top-bar .social-icons a:hover {
+      color: #e1306c; /* rose Instagram par défaut, modifiable pour chaque réseau */
+    }
 
-h1, h2, h3 {
-  color: var(--accent);
-}
+    /* Header nav */
+    header nav {
+      text-align: center;
+      padding: 10px 0;
+    }
 
-button, .btn {
-  display: inline-block;
-  background-color: var(--accent);
-  color: var(--text-light);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-transform: uppercase;
-  font-size: 14px;
-}
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-button:hover, .btn:hover {
-  background-color: #b83223;
-}
+    nav a:hover {
+      color: var(--accent);
+    }
 
-section.card {
-  background-color: #222;
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-}
+    main {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-</style>
+    h1, h2, h3 {
+      color: var(--accent);
+    }
 
+    button, .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--text-light);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    button:hover, .btn:hover {
+      background-color: #b83223;
+    }
+
+    section.card {
+      background-color: #222;
+      padding: 40px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* Responsive top-bar */
+    @media (max-width: 600px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .top-bar .social-icons {
+        margin-top: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-  <div class="top-bar">
-    <img src="logo.png" alt="ATH Automotive" class="logo">
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+
+  <header>
+    <div class="top-bar">
+      <img src="logo.png" alt="ATH Automotive" class="logo">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
-  </div>
+
     <nav>
       <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
@@ -105,5 +146,6 @@ img {
     <h1>Bienvenue sur le site de ATH Automotive 🚗</h1>
     <p>Notre site est en construction. Bientôt, vous pourrez découvrir nos services et nos offres.</p>
   </main>
+
 </body>
 </html>
