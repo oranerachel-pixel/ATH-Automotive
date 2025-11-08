@@ -27,6 +27,7 @@
       line-height: 1.6;
     }
 
+    /* Top-bar */
     .top-bar {
       background-color: var(--dark-bg);
       display: flex;
@@ -35,7 +36,9 @@
       padding: 10px 20px;
     }
 
-    .top-bar .logo { height: 40px; }
+    .top-bar .logo {
+      height: 40px;
+    }
 
     .top-bar .social-icons a {
       color: var(--text-light);
@@ -44,8 +47,11 @@
       transition: color 0.3s;
     }
 
-    .top-bar .social-icons a:hover { color: var(--accent); }
+    .top-bar .social-icons a:hover {
+      color: var(--accent);
+    }
 
+    /* Menu principal */
     nav {
       background-color: var(--dark-bg-alt);
       text-align: center;
@@ -60,7 +66,9 @@
       transition: color 0.3s;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
     main {
       padding: 60px 20px;
@@ -69,7 +77,9 @@
       text-align: center;
     }
 
-    h1, h2, h3 { color: var(--accent); }
+    h1, h2, h3 {
+      color: var(--accent);
+    }
 
     form input, form textarea, form button {
       width: 100%;
@@ -87,20 +97,15 @@
       transition: background-color 0.3s;
     }
 
-    form button:hover { background-color: #b83223; }
-
-    /* Message de confirmation */
-    #confirmation {
-      display: none;
-      margin-top: 20px;
-      color: #4BB543; /* vert */
-      font-weight: bold;
+    form button:hover {
+      background-color: #b83223;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <!-- Top-bar : logo + réseaux sociaux -->
     <div class="top-bar">
       <img src="logo.png" alt="ATH Automotive" class="logo">
       <div class="social-icons">
@@ -110,6 +115,7 @@
       </div>
     </div>
 
+    <!-- Menu principal -->
     <nav>
       <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
@@ -121,42 +127,13 @@
     <h1>Contactez-nous</h1>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
 
-    <form id="contactForm" action="https://formspree.io/f/xwpaebnv" method="POST">
+    <form action="https://formspree.io/f/TON_ID" method="POST">
       <input type="text" name="name" placeholder="Votre nom" required>
       <input type="email" name="email" placeholder="Votre email" required>
       <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
-
-    <div id="confirmation">Merci, votre message a été envoyé !</div>
   </main>
-
-  <script>
-    const form = document.getElementById("contactForm");
-    const confirmation = document.getElementById("confirmation");
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault(); // Empêche le rechargement de la page
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = "none"; // cache le formulaire
-          confirmation.style.display = "block"; // affiche le message
-        } else {
-          alert("Une erreur est survenue. Veuillez réessayer.");
-        }
-      })
-      .catch(error => {
-        alert("Une erreur est survenue. Veuillez réessayer.");
-      });
-    });
-  </script>
 
 </body>
 </html>
