@@ -27,23 +27,35 @@
       line-height: 1.6;
     }
 
-    /* --- HEADER --- */
+    /* Barre supérieure */
     .top-bar {
+      background-color: var(--dark-bg);
       display: flex;
-      align-items: center; /* logo aligné avec menu et réseaux */
       justify-content: space-between;
+      align-items: center;
       padding: 10px 20px;
-      background-color: var(--dark-bg-alt);
     }
 
-    .logo {
+    .top-bar .logo {
       height: 40px;
-      width: auto;
     }
 
+    .top-bar .social-icons a {
+      color: var(--text-light);
+      margin-left: 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .top-bar .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    /* Menu principal */
     nav {
-      flex-grow: 1;
+      background-color: var(--dark-bg-alt);
       text-align: center;
+      padding: 15px 0;
     }
 
     nav a {
@@ -58,22 +70,6 @@
       color: var(--accent);
     }
 
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icons a {
-      color: var(--text-light);
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: var(--accent);
-    }
-
-    /* --- CONTENU PRINCIPAL --- */
     main {
       padding: 60px 20px;
       max-width: 1000px;
@@ -134,42 +130,27 @@
     .btn:hover {
       background-color: #b83223;
     }
-
-    footer {
-      background-color: var(--dark-bg-alt);
-      text-align: center;
-      padding: 20px;
-      color: var(--text-light);
-      font-size: 14px;
-      margin-top: 50px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="top-bar">
-      <!-- Logo à gauche -->
       <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
-
-      <!-- Menu centré -->
-      <nav>
-        <a href="index.html">ATH Automotive</a> |
-        <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <!-- Réseaux sociaux -->
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/ath.automotive?igsh=MTJ1Y21uajQzd3Y4aA==" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
+
+    <nav>
+      <a href="index.html">ATH Automotive</a> |
+      <a href="services.html">Services</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- CONTENU PRINCIPAL -->
   <main>
     <h1>Nos Services</h1>
 
@@ -201,11 +182,6 @@
 
     <a href="https://calendly.com/orane-rachel/30min" target="_blank" class="btn">Prendre Rendez-vous</a>
   </main>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 ATH Automotive — Tous droits réservés.
-  </footer>
 
   <!-- Widget badge Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
