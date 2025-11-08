@@ -123,26 +123,33 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Contactez-nous</h1>
-    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
+ <main>
+  <h1>Contactez-nous</h1>
+  <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
 
+  <!-- FORMULAIRE FREEFORMS -->
   <form action="https://formspree.io/f/xwpaebnv" method="POST">
-  <input type="text" name="name" placeholder="Votre nom" required>
-  <input type="email" name="email" placeholder="Votre email" required>
-  <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" rows="5"></textarea>
 
-  <!-- Champs pour la prise de rendez-vous -->
-  <label for="rdv-date" style="display:block; text-align:left; margin-top:10px;">Choisissez une date :</label>
-  <input type="date" id="rdv-date" name="rdv-date" required>
+    <!-- Champs date / heure si tu veux toujours la prise manuelle -->
+    <label for="rdv-date">Choisissez une date :</label>
+    <input type="date" id="rdv-date" name="rdv-date">
 
-  <label for="rdv-time" style="display:block; text-align:left; margin-top:10px;">Choisissez une heure :</label>
-  <input type="time" id="rdv-time" name="rdv-time" required>
+    <label for="rdv-time">Choisissez une heure :</label>
+    <input type="time" id="rdv-time" name="rdv-time">
 
-  <button type="submit">Envoyer</button>
-</form>
+    <button type="submit">Envoyer</button>
+  </form>
 
-  </main>
+  <!-- WIDGET CALENDLY : met ce code juste ici -->
+  <h2>Ou prenez directement rendez-vous en ligne</h2>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/toncompte/30min" style="min-width:320px;height:630px;"></div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+</main>
+
 
 </body>
 </html>
