@@ -4,13 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Mon Entreprise</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    input, textarea { width: 300px; margin: 10px 0; padding: 10px; }
-    nav a { margin: 0 10px; text-decoration: none; color: #e03b2d; }
-  </style>
 </head>
 <body>
+
   <header>
     <nav>
       <a href="index.html">Accueil</a> |
@@ -19,14 +15,17 @@
     </nav>
   </header>
 
-  <h1>Contactez-nous</h1>
-  <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
+  <main>
+    <h1>Contactez-nous</h1>
+    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
 
-  <form action="https://formspree.io/f/XYZ" method="POST">
-    <input type="text" name="name" placeholder="Votre nom" required><br>
-    <input type="email" name="email" placeholder="Votre email" required><br>
-    <textarea name="message" placeholder="Votre message" rows="5" required></textarea><br>
-    <button type="submit">Envoyer</button>
-  </form>
+    <form action="https://formspree.io/f/XYZ" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required><br>
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea><br>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+
 </body>
 </html>
