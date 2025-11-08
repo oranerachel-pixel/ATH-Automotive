@@ -12,18 +12,20 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Accueil</a> |
+      <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <h1>Nos Services</h1>
-  <p>Découvrez tous les services que nous proposons :</p>
-  <ul>
-    <li>Service 1 : Diagnostic automobile</li>
-    <li>Service 2 : Réparation rapide</li>
-    <li>Service 3 : Vente d’accessoires</li>
-  </ul>
+  <main>
+    <h1>Nos Services</h1>
+    <p>Découvrez tous les services que nous proposons :</p>
+    <ul>
+      <li>Service 1 : Diagnostic automobile</li>
+      <li>Service 2 : Réparation rapide</li>
+      <li>Service 3 : Vente d’accessoires</li>
+    </ul>
+  </main>
 </body>
 </html>
