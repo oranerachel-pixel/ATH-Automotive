@@ -3,90 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Mon Entreprise</title>
+  <title>Services - Mon Entreprise</title>
   <style>
-    /* Style général */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    header {
-      background-color: #007BFF;
-      color: white;
-      padding: 15px 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #007BFF;
-    }
-
-    form input, form textarea, form button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-
-    form button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #0056b3;
-    }
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #e03b2d; }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
+      <a href="index.html">Accueil</a> |
+      <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Contactez-nous</h1>
-    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
-
-    <form action="https://formspree.io/f/XYZ" method="POST">
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </main>
-
+  <h1>Nos Services</h1>
+  <p>Découvrez tous les services que nous proposons :</p>
+  <ul>
+    <li>Service 1 : Diagnostic automobile</li>
+    <li>Service 2 : Réparation rapide</li>
+    <li>Service 3 : Vente d’accessoires</li>
+  </ul>
 </body>
 </html>
