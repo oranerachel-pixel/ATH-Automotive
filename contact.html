@@ -36,9 +36,7 @@
       padding: 10px 20px;
     }
 
-    .top-bar .logo {
-      height: 40px;
-    }
+    .top-bar .logo { height: 40px; }
 
     .top-bar .social-icons a {
       color: var(--text-light);
@@ -47,9 +45,7 @@
       transition: color 0.3s;
     }
 
-    .top-bar .social-icons a:hover {
-      color: var(--accent);
-    }
+    .top-bar .social-icons a:hover { color: var(--accent); }
 
     /* Menu principal */
     nav {
@@ -66,9 +62,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: var(--accent);
-    }
+    nav a:hover { color: var(--accent); }
 
     main {
       padding: 60px 20px;
@@ -77,9 +71,9 @@
       text-align: center;
     }
 
-    h1, h2, h3 {
-      color: var(--accent);
-    }
+    h1, h2 { color: var(--accent); }
+
+    p { font-size: 18px; margin-bottom: 20px; }
 
     form input, form textarea, form button {
       width: 100%;
@@ -97,15 +91,12 @@
       transition: background-color 0.3s;
     }
 
-    form button:hover {
-      background-color: #b83223;
-    }
+    form button:hover { background-color: #b83223; }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Top-bar : logo + réseaux sociaux -->
     <div class="top-bar">
       <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
       <div class="social-icons">
@@ -115,7 +106,6 @@
       </div>
     </div>
 
-    <!-- Menu principal -->
     <nav>
       <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
@@ -123,33 +113,36 @@
     </nav>
   </header>
 
- <main>
-  <h1>Contactez-nous</h1>
-  <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
+  <main>
+    <h1>Contactez-nous</h1>
+    <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
 
-  <!-- FORMULAIRE FREEFORMS -->
-  <form action="https://formspree.io/f/xwpaebnv" method="POST">
-    <input type="text" name="name" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" placeholder="Votre message" rows="5"></textarea>
+    <!-- FORMULAIRE FREEFORMS -->
+    <form action="https://formspree.io/f/xwpaebnv" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
 
-    <!-- Champs date / heure si tu veux toujours la prise manuelle -->
-    <label for="rdv-date">Choisissez une date :</label>
-    <input type="date" id="rdv-date" name="rdv-date">
+    <h2>Ou prenez directement rendez-vous en ligne</h2>
+    <p>Cliquez sur le bouton en bas à droite pour voir les créneaux disponibles :</p>
+  </main>
 
-    <label for="rdv-time">Choisissez une heure :</label>
-    <input type="time" id="rdv-time" name="rdv-time">
-
-    <button type="submit">Envoyer</button>
-  </form>
-
-  <!-- WIDGET CALENDLY : met ce code juste ici -->
-  <h2>Ou prenez directement rendez-vous en ligne</h2>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/toncompte/30min" style="min-width:320px;height:630px;"></div>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-</main>
-
+  <!-- WIDGET BADGE CALENDLY -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/orane-rachel/30min', // Remplace par ton lien
+        text: 'Planifier un rendez-vous',
+        color: '#e03b2d',
+        textColor: '#ffffff',
+        branding: true
+      });
+    }
+  </script>
 
 </body>
 </html>
