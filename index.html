@@ -3,41 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Entreprise</title>
+  <title>ATH Automotive</title>
+
+  <!-- Font Awesome pour les icônes réseaux -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background-color: #e03b2d; color: white; padding: 20px 0; text-align: center; }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    :root {
+      --dark-bg: #111111;
+      --dark-bg-alt: #1a1a1a;
+      --accent: #e03b2d;
+      --text-light: #ffffff;
+      --text: #f5f5f5;
+      --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
-    section { padding: 50px 20px; text-align: center; }
-    h2 { color: #e03b2d; margin-bottom: 20px; }
-    p { font-size: 18px; max-width: 600px; margin: 0 auto 20px auto; }
-    footer { background-color: #333; color: white; padding: 20px 0; text-align: center; }
-    input, textarea { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-    button { padding: 10px 20px; background-color: #e03b2d; color: white; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #c32b1f; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
+
+    /* Top-bar */
+    .top-bar {
+      background-color: var(--dark-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .top-bar .logo { height: 40px; }
+
+    .top-bar .social-icons a {
+      color: var(--text-light);
+      margin-left: 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .top-bar .social-icons a:hover { color: var(--accent); }
+
+    /* Menu principal */
+    nav {
+      background-color: var(--dark-bg-alt);
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    main {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background-color: var(--accent);
+      color: var(--text-light);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover { background-color: #b83223; }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Bienvenue sur le site de mon entreprise 🚀</h1>
+    <!-- Top-bar : logo + réseaux sociaux -->
+    <div class="top-bar">
+      <img src="logo.png" alt="ATH Automotive" class="logo">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Menu principal -->
     <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">ATH Automotive</a> |
+      <a href="services.html">Services</a> |
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section id="accueil">
-    <h2>Accueil</h2>
-    <p>Notre site est en construction. Bientôt, vous pourrez découvrir nos services et toutes nos offres. Restez connectés !</p>
-  </section>
+  <main>
+    <h1>Bienvenue chez ATH Automotive 🚗</h1>
+    <p>Nous sommes spécialisés dans l’entretien et la réparation automobile de qualité. Notre équipe experte est à votre service pour tous vos besoins automobiles.</p>
 
-  <section id="services">
     <h2>Nos Services</h2>
-    <p>Nous pro
+    <p>Du diagnostic à la réparation, en passant par l’entretien complet, nous proposons des services adaptés à chaque véhicule et chaque client.</p>
+
+    <a class="cta-button" href="services.html">Découvrir nos services</a>
+    <a class="cta-button" href="contact.html">Nous contacter</a>
+  </main>
+
+</body>
+</html>
