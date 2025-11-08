@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - ATH Automotive</title>
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -27,7 +27,7 @@
       line-height: 1.6;
     }
 
-    /* Top-bar */
+    /* Barre supérieure */
     .top-bar {
       background-color: var(--dark-bg);
       display: flex;
@@ -36,7 +36,9 @@
       padding: 10px 20px;
     }
 
-    .top-bar .logo { height: 40px; }
+    .top-bar .logo {
+      height: 40px;
+    }
 
     .top-bar .social-icons a {
       color: var(--text-light);
@@ -45,7 +47,9 @@
       transition: color 0.3s;
     }
 
-    .top-bar .social-icons a:hover { color: var(--accent); }
+    .top-bar .social-icons a:hover {
+      color: var(--accent);
+    }
 
     /* Menu principal */
     nav {
@@ -62,7 +66,9 @@
       transition: color 0.3s;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
     main {
       padding: 60px 20px;
@@ -76,17 +82,17 @@
       margin-bottom: 40px;
     }
 
-    .services-container {
+    .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 20px;
     }
 
     .service {
       background-color: var(--dark-bg-alt);
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
       transition: transform 0.3s;
     }
 
@@ -100,14 +106,29 @@
       margin-bottom: 15px;
     }
 
-    .service h2 {
-      color: var(--accent);
+    .service h3 {
+      color: var(--text-light);
       margin-bottom: 10px;
     }
 
     .service p {
-      font-size: 16px;
-      color: var(--text);
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--text-light);
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b83223;
     }
   </style>
 </head>
@@ -133,39 +154,49 @@
   <main>
     <h1>Nos Services</h1>
 
-    <div class="services-container">
+    <div class="services">
       <div class="service">
         <i class="fas fa-car"></i>
-        <h2>Entretien & Révision</h2>
-        <p>Révision complète, vidange, filtres, courroie de distribution et contrôle général de votre véhicule.</p>
+        <h3>Entretien et Réparation</h3>
+        <p>Révision complète, vidange, freins, pneus, climatisation… Nos experts entretiennent votre véhicule avec soin et professionnalisme.</p>
       </div>
 
       <div class="service">
-        <i class="fas fa-tools"></i>
-        <h2>Réparation Mécanique</h2>
-        <p>Diagnostic, freinage, embrayage, suspension, échappement et bien plus encore.</p>
+        <i class="fas fa-oil-can"></i>
+        <h3>Préparation moteur</h3>
+        <p>Optimisez les performances de votre moteur grâce à notre service de reprogrammation et d’optimisation sur mesure.</p>
       </div>
 
       <div class="service">
-        <i class="fas fa-bolt"></i>
-        <h2>Diagnostic Électronique</h2>
-        <p>Analyse complète des systèmes électroniques et effacement des codes défauts.</p>
+        <i class="fas fa-paint-roller"></i>
+        <h3>Carrosserie & Esthétique</h3>
+        <p>Redonnez à votre véhicule tout son éclat : polissage, detailing, peinture complète ou partielle, rénovation de phares.</p>
       </div>
 
       <div class="service">
-        <i class="fas fa-spray-can-sparkles"></i>
-        <h2>Préparation & Nettoyage</h2>
-        <p>Nettoyage intérieur/extérieur, polissage et préparation esthétique pour la vente.</p>
-      </div>
-
-      <div class="service">
-        <i class="fas fa-calendar-check"></i>
-        <h2>Prise de Rendez-vous</h2>
-        <p>Planifiez facilement un créneau pour vos réparations ou diagnostics via notre outil en ligne.</p>
+        <i class="fas fa-toolbox"></i>
+        <h3>Diagnostic & Électronique</h3>
+        <p>Analyse électronique complète et réparation des pannes grâce à nos outils de diagnostic de dernière génération.</p>
       </div>
     </div>
+
+    <a href="https://calendly.com/orane-rachel/30min" target="_blank" class="btn">Prendre Rendez-vous</a>
   </main>
+
+  <!-- Widget badge Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/orane-rachel/30min',
+        text: 'Planifier un rendez-vous',
+        color: '#e03b2d',
+        textColor: '#ffffff',
+        branding: true
+      });
+    };
+  </script>
 
 </body>
 </html>
-
