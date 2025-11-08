@@ -127,12 +127,21 @@
     <h1>Contactez-nous</h1>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message :</p>
 
-    <form action="https://formspree.io/f/xwpaebnv method="POST">
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+  <form action="https://formspree.io/f/xwpaebnv" method="POST">
+  <input type="text" name="name" placeholder="Votre nom" required>
+  <input type="email" name="email" placeholder="Votre email" required>
+  <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+
+  <!-- Champs pour la prise de rendez-vous -->
+  <label for="rdv-date" style="display:block; text-align:left; margin-top:10px;">Choisissez une date :</label>
+  <input type="date" id="rdv-date" name="rdv-date" required>
+
+  <label for="rdv-time" style="display:block; text-align:left; margin-top:10px;">Choisissez une heure :</label>
+  <input type="time" id="rdv-time" name="rdv-time" required>
+
+  <button type="submit">Envoyer</button>
+</form>
+
   </main>
 
 </body>
