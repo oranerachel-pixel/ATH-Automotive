@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - ATH Automotive</title>
 
-  <!-- Font Awesome pour les icônes -->
+  <!-- Font Awesome pour les icônes réseaux -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -27,48 +27,48 @@
       line-height: 1.6;
     }
 
-    /* HEADER global : logo + menu alignés sur la même ligne */
-    header {
+    /* --- HEADER ALIGNÉ --- */
+    .top-bar {
       background-color: var(--dark-bg-alt);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
-      flex-wrap: wrap;
     }
 
-    header img {
-      height: 45px;
-      vertical-align: middle;
+    .logo {
+      height: 60px;
+      width: auto;
+      display: block;
     }
 
-    nav {
+    /* --- MENU --- */
+    .main-nav {
       display: flex;
-      align-items: center;
-      gap: 25px;
+      gap: 30px;
     }
 
-    nav a {
+    .main-nav a {
       color: var(--text-light);
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    .main-nav a:hover {
       color: var(--accent);
     }
 
+    /* --- RÉSEAUX SOCIAUX --- */
     .social-icons {
       display: flex;
       align-items: center;
       gap: 15px;
-      margin-left: 20px;
     }
 
     .social-icons a {
       color: var(--text-light);
-      font-size: 18px;
+      font-size: 20px;
       transition: color 0.3s;
     }
 
@@ -76,7 +76,7 @@
       color: var(--accent);
     }
 
-    /* CONTENU PRINCIPAL */
+    /* --- CONTENU PRINCIPAL --- */
     main {
       padding: 60px 20px;
       max-width: 1000px;
@@ -84,126 +84,103 @@
       text-align: center;
     }
 
-    h1 {
+    h1, h2 {
       color: var(--accent);
-      margin-bottom: 40px;
     }
 
-    .services {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .service {
-      background-color: var(--dark-bg);
+    .service-card {
+      background-color: var(--dark-bg-alt);
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .service:hover {
+    .service-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(224, 59, 45, 0.4);
     }
 
-    .service i {
+    .service-card i {
       font-size: 40px;
       color: var(--accent);
       margin-bottom: 15px;
     }
 
-    .service h3 {
+    footer {
+      background-color: var(--dark-bg-alt);
+      text-align: center;
+      padding: 20px;
       color: var(--text-light);
-      margin-bottom: 10px;
-    }
-
-    .service p {
-      color: #ccc;
-      font-size: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: var(--accent);
-      color: var(--text-light);
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 30px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #b83223;
+      font-size: 14px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <!-- Logo à gauche -->
-    <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
+    <div class="top-bar">
+      <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
 
-    <!-- Menu + réseaux sur la même ligne -->
-    <nav>
-      <a href="index.html">ATH Automotive</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/ath.automotive?igsh=MTJ1Y21uajQzd3Y4aA==" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-    </nav>
+    </div>
   </header>
 
+  <!-- CONTENU PRINCIPAL -->
   <main>
     <h1>Nos Services</h1>
+    <p>Chez <strong>ATH Automotive</strong>, nous proposons des prestations de qualité pour l’entretien, la préparation et la personnalisation de votre véhicule.</p>
 
-    <div class="services">
-      <div class="service">
-        <i class="fas fa-car"></i>
-        <h3>Entretien et Réparation</h3>
-        <p>Révision complète, vidange, freins, pneus, climatisation… Nos experts entretiennent votre véhicule avec soin et professionnalisme.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h2>Entretien & Révision</h2>
+        <p>Vidange, freins, filtres, pneumatiques — nos experts prennent soin de votre véhicule pour assurer sa fiabilité et sa performance.</p>
       </div>
 
-      <div class="service">
-        <i class="fas fa-oil-can"></i>
-        <h3>Préparation moteur</h3>
-        <p>Optimisez les performances de votre moteur grâce à notre service de reprogrammation et d’optimisation sur mesure.</p>
+      <div class="service-card">
+        <i class="fas fa-paint-brush"></i>
+        <h2>Esthétique automobile</h2>
+        <p>Nettoyage complet, polissage, detailing intérieur/extérieur — redonnez à votre voiture son éclat d’origine.</p>
       </div>
 
-      <div class="service">
-        <i class="fas fa-paint-roller"></i>
-        <h3>Carrosserie & Esthétique</h3>
-        <p>Redonnez à votre véhicule tout son éclat : polissage, detailing, peinture complète ou partielle, rénovation de phares.</p>
+      <div class="service-card">
+        <i class="fas fa-tachometer-alt"></i>
+        <h2>Préparation moteur</h2>
+        <p>Optimisation moteur, stage 1 à 3, reprogrammation — améliorez les performances tout en respectant la mécanique.</p>
       </div>
 
-      <div class="service">
-        <i class="fas fa-toolbox"></i>
-        <h3>Diagnostic & Électronique</h3>
-        <p>Analyse électronique complète et réparation des pannes grâce à nos outils de diagnostic de dernière génération.</p>
+      <div class="service-card">
+        <i class="fas fa-car-side"></i>
+        <h2>Personnalisation</h2>
+        <p>Covering, jantes, accessoires — personnalisez votre véhicule selon vos goûts et votre style.</p>
       </div>
     </div>
-
-    <a href="https://calendly.com/orane-rachel/30min" target="_blank" class="btn">Prendre Rendez-vous</a>
   </main>
 
-  <!-- Widget badge Calendly -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.onload = function() {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/orane-rachel/30min',
-        text: 'Planifier un rendez-vous',
-        color: '#e03b2d',
-        textColor: '#ffffff',
-        branding: true
-      });
-    };
-  </script>
+  <!-- PIED DE PAGE -->
+  <footer>
+    © 2025 ATH Automotive — Tous droits réservés.
+  </footer>
 
 </body>
 </html>
