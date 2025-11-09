@@ -8,67 +8,96 @@
   <!-- Font Awesome pour les icônes réseaux -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style> :root { --dark-bg: #111111; --dark-bg-alt: #1a1a1a; --accent: #e03b2d; --text-light: #ffffff; --text: #f5f5f5; --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; } body { margin: 0; padding: 0; background-color: var(--dark-bg); color: var(--text); font-family: var(--font-main); line-height: 1.6; } /* Top-bar */ .top-bar { background-color: var(--dark-bg); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; } .top-bar .logo { height: 40px; } .top-bar .social-icons a { color: var(--text-light); margin-left: 15px; font-size: 18px; transition: color 0.3s; }
+<style> 
+:root { 
+  --dark-bg: #111111; 
+  --dark-bg-alt: #1a1a1a; 
+  --accent: #e03b2d; 
+  --text-light: #ffffff; 
+  --text: #f5f5f5; 
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+} 
+body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: var(--dark-bg); 
+  color: var(--text); 
+  font-family: var(--font-main); 
+  line-height: 1.6; 
+} 
 
+/* Top-bar */
+.top-bar { 
+  background-color: var(--dark-bg); 
+  display: flex; 
+  justify-content: flex-end; /* plus besoin de logo donc aligné à droite */
+  align-items: center; 
+  padding: 10px 20px; 
+} 
 
-    .top-bar .social-icons a {
-      color: var(--text-light);
-      margin-left: 15px;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
+.top-bar .social-icons a {
+  color: var(--text-light);
+  margin-left: 15px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
 
-    .top-bar .social-icons a:hover { color: var(--accent); }
+.top-bar .social-icons a:hover { 
+  color: var(--accent); 
+}
 
-    /* Menu principal */
-    nav {
-      background-color: var(--dark-bg-alt);
-      text-align: center;
-      padding: 15px 0;
-    }
+/* Menu principal */
+nav {
+  background-color: var(--dark-bg-alt);
+  text-align: center;
+  padding: 15px 0;
+}
 
-    nav a {
-      color: var(--text-light);
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    nav a:hover { color: var(--accent); }
+nav a:hover { 
+  color: var(--accent); 
+}
 
-    main {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
+main {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-    h1, h2 {
-      color: var(--accent);
-    }
+h1, h2 {
+  color: var(--accent);
+}
 
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 20px auto;
-    }
+p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+}
 
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin-top: 20px;
-      background-color: var(--accent);
-      color: var(--text-light);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: var(--accent);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
 
-    .cta-button:hover { background-color: #b83223; }
-
-  </style>
+.cta-button:hover { 
+  background-color: #b83223; 
+}
+</style>
 </head>
 <body>
 
