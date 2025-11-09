@@ -27,7 +27,7 @@
       line-height: 1.6;
     }
 
-    /* Top-bar : réseaux sociaux alignées à droite avec espacement identique à l'accueil */
+    /* Top-bar : réseaux sociaux alignées à droite */
     .top-bar {
       display: flex;
       justify-content: flex-end;
@@ -39,12 +39,12 @@
     .top-bar .social-icons a {
       color: var(--text-light);
       font-size: 18px;
-      margin-left: 15px; /* espacement identique */
+      margin-left: 15px;
       transition: color 0.3s ease;
     }
 
     .top-bar .social-icons a:first-child {
-      margin-left: 0; /* pas de marge pour le premier logo */
+      margin-left: 0;
     }
 
     .top-bar .social-icons a:hover {
@@ -53,21 +53,33 @@
 
     /* Menu principal */
     nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background-color: var(--dark-bg-alt);
-      text-align: center;
-      padding: 15px 0;
+      padding: 10px 20px;
       border-bottom: 1px solid #222;
     }
 
-    nav a {
+    nav .logo img {
+      height: 40px; /* Taille du logo rapetissé */
+      width: auto;
+      vertical-align: middle;
+    }
+
+    nav .menu-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .menu-links a {
       color: var(--text-light);
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    nav .menu-links a:hover {
       color: var(--accent);
     }
 
@@ -168,13 +180,16 @@
 
     <!-- Menu principal -->
     <nav>
-         <nav>
       <div class="logo">
-        <img src="Untitled_Artwork-1.png" alt="Logo ATH Automotive">
+        <a href="index.html">
+          <img src="Untitled_Artwork-1.png" alt="Logo ATH Automotive">
+        </a>
       </div>
-      <a href="index.html">Accueil</a> |
-      <a href="services.html">Services</a> |
-      <a href="contact.html">Contact</a>
+      <div class="menu-links">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -196,4 +211,3 @@
 
 </body>
 </html>
-
