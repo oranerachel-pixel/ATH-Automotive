@@ -52,19 +52,28 @@
       color: var(--accent);
     }
 
-    /* Barre de navigation centrée */
+    /* Barre de navigation */
     nav {
       background-color: var(--dark-bg-alt);
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
       padding: 10px 40px;
       border-bottom: 1px solid #222;
     }
 
+    /* Logo image à gauche - élargi */
+    .logo img {
+      height: 80px; /* augmenter la hauteur pour élargir */
+      width: auto;   /* conserver les proportions */
+      display: block;
+    }
+
+    /* Liens de navigation */
     .nav-links {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-grow: 1;
     }
 
     .nav-links a {
@@ -134,16 +143,18 @@
       margin-bottom: 20px;
     }
 
-    /* Responsive pour petits écrans */
     @media (max-width: 700px) {
       nav {
         flex-direction: column;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        margin-top: 10px;
       }
       .nav-links a {
         margin: 10px;
       }
     }
-
   </style>
 </head>
 <body>
@@ -158,6 +169,9 @@
     </div>
 
     <nav>
+      <div class="logo">
+        <img src="Untitled_Artwork-1.png" alt="Logo ATH Automotive">
+      </div>
       <div class="nav-links">
         <a href="index.html">Accueil</a> |
         <a href="services.html">Services</a> |
