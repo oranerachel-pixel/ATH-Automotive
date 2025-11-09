@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - ATH Automotive</title>
 
-  <!-- Font Awesome pour les icônes réseaux -->
+  <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -27,31 +27,23 @@
       line-height: 1.6;
     }
 
-    /* Top-bar */
+    /* HEADER */
     .top-bar {
-      background-color: var(--dark-bg);
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 10px 20px;
-    }
-
-    .top-bar .logo { height: 40px; }
-
-    .top-bar .social-icons a {
-      color: var(--text-light);
-      margin-left: 15px;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    .top-bar .social-icons a:hover { color: var(--accent); }
-
-    /* Menu principal */
-    nav {
       background-color: var(--dark-bg-alt);
+    }
+
+    .top-bar .logo {
+      height: 50px;
+      width: auto;
+    }
+
+    nav {
+      flex-grow: 1;
       text-align: center;
-      padding: 15px 0;
     }
 
     nav a {
@@ -62,80 +54,161 @@
       transition: color 0.3s;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: var(--text-light);
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    /* MAIN CONTENT */
     main {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
     }
 
-    h1, h2 {
+    h1 {
       color: var(--accent);
+      font-size: 3rem;
+      margin-bottom: 40px;
     }
 
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 20px auto;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .cta-button {
+    .service-card {
+      background-color: var(--dark-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(224, 59, 45, 0.6);
+    }
+
+    .service-card i {
+      font-size: 50px;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+
+    .service-card p {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .btn {
       display: inline-block;
-      padding: 15px 30px;
-      margin-top: 20px;
       background-color: var(--accent);
       color: var(--text-light);
+      padding: 12px 30px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
+      margin-top: 40px;
       font-weight: bold;
       transition: background-color 0.3s;
     }
 
-    .cta-button:hover { background-color: #b83223; }
+    .btn:hover {
+      background-color: #b83223;
+    }
+
+    footer {
+      background-color: var(--dark-bg-alt);
+      text-align: center;
+      padding: 20px;
+      color: var(--text-light);
+      font-size: 14px;
+      margin-top: 50px;
+    }
 
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <!-- Top-bar : logo + réseaux sociaux -->
     <div class="top-bar">
       <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
+      <nav>
+        <a href="index.html">Accueil</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-
-    <!-- Menu principal -->
-    <nav>
-      <a href="index.html">ATH Automotive</a> |
-      <a href="services.html">Services</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
+  <!-- MAIN -->
   <main>
     <h1>Nos Services</h1>
-    <p>Chez ATH Automotive, nous proposons une gamme complète de services pour entretenir et réparer votre véhicule, adaptés à chaque besoin et chaque client.</p>
+    <p>Découvrez les services professionnels que nous proposons pour votre véhicule :</p>
 
-    <h2>Entretien & Réparation</h2>
-    <p>Révision complète, vidange, freins, pneus, climatisation… Nos experts entretiennent votre véhicule avec soin et professionnalisme.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-car"></i>
+        <h3>Entretien & Réparation</h3>
+        <p>Révision complète, vidange, freins, pneus… Nos experts entretiennent votre véhicule avec soin et professionnalisme.</p>
+      </div>
 
-    <h2>Préparation Moteur</h2>
-    <p>Optimisation des performances moteur et reprogrammation pour tirer le meilleur de votre véhicule.</p>
+      <div class="service-card">
+        <i class="fas fa-oil-can"></i>
+        <h3>Préparation Moteur</h3>
+        <p>Optimisation des performances moteur et reprogrammation pour tirer le meilleur de votre véhicule.</p>
+      </div>
 
-    <h2>Carrosserie & Esthétique</h2>
-    <p>Polissage, detailing, peinture complète ou partielle, rénovation de phares pour un véhicule éclatant.</p>
+      <div class="service-card">
+        <i class="fas fa-paint-roller"></i>
+        <h3>Carrosserie & Esthétique</h3>
+        <p>Polissage, detailing, peinture complète ou partielle, rénovation de phares pour un véhicule éclatant.</p>
+      </div>
 
-    <h2>Diagnostic & Électronique</h2>
-    <p>Analyse complète et réparation des pannes grâce à nos outils de diagnostic de dernière génération.</p>
+      <div class="service-card">
+        <i class="fas fa-toolbox"></i>
+        <h3>Diagnostic & Électronique</h3>
+        <p>Analyse complète et réparation des pannes grâce à nos outils de diagnostic de dernière génération.</p>
+      </div>
+    </div>
 
-    <a class="cta-button" href="contact.html">Prendre Rendez-vous / Nous contacter</a>
+    <a href="contact.html" class="btn">Prendre Rendez-vous</a>
   </main>
+
+  <footer>
+    © 2025 ATH Automotive — Tous droits réservés.
+  </footer>
 
 </body>
 </html>
