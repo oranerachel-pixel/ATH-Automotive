@@ -31,15 +31,14 @@
     .top-bar {
       background-color: var(--dark-bg);
       display: flex;
-      justify-content: space-between; /* logo à gauche, icônes à droite */
       align-items: center;
       padding: 10px 20px;
     }
 
-    .top-bar .logo {
-      font-weight: bold;
-      font-size: 20px;
-      color: var(--accent);
+    /* Les icônes sociales à droite */
+    .top-bar .social-icons {
+      margin-left: auto; /* pousse le bloc à droite */
+      display: flex;
     }
 
     .top-bar .social-icons a {
@@ -49,7 +48,9 @@
       transition: color 0.3s;
     }
 
-    .top-bar .social-icons a:hover { color: var(--accent); }
+    .top-bar .social-icons a:hover {
+      color: var(--accent);
+    }
 
     /* Menu principal */
     nav {
@@ -101,18 +102,16 @@
 <body>
 
   <header>
-    <!-- Top-bar avec logo à gauche et icônes sociales à droite -->
     <div class="top-bar">
-      <div class="logo">ATH Automotive</div>
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/ath.automotive?igsh=MTJ1Y21uajQzd3Y4aA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ath.automotive" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
 
     <nav>
-      <a href="index.html">Accueil</a> |
+      <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
@@ -139,7 +138,7 @@
   <script type="text/javascript">
     window.onload = function() {
       Calendly.initBadgeWidget({
-        url: 'https://calendly.com/orane-rachel/30min', 
+        url: 'https://calendly.com/orane-rachel/30min',
         text: 'Planifier un rendez-vous',
         color: '#e03b2d',
         textColor: '#ffffff',
