@@ -52,15 +52,31 @@
       color: var(--accent);
     }
 
-    /* Menu principal */
+    /* Barre de navigation */
     nav {
       background-color: var(--dark-bg-alt);
-      text-align: center;
-      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
       border-bottom: 1px solid #222;
     }
 
-    nav a {
+    /* Logo image à gauche */
+    .logo img {
+      height: 55px; /* taille du logo */
+      width: auto;
+      display: block;
+    }
+
+    /* Liens de navigation */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .nav-links a {
       color: var(--text-light);
       text-decoration: none;
       margin: 0 20px;
@@ -68,27 +84,27 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: var(--accent);
     }
 
     /* Contenu principal */
     main {
       padding: 60px 20px;
-      max-width: 1200px; /* même largeur que Services */
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
     }
 
     h1 {
       color: var(--accent);
-      font-size: 2.2em; /* même taille que Services */
+      font-size: 2.2em;
       margin-bottom: 40px;
     }
 
     /* Formulaire */
     form {
-      max-width: 700px; /* largeur identique aux services */
+      max-width: 700px;
       margin: 0 auto;
     }
 
@@ -126,6 +142,21 @@
       color: var(--text);
       margin-bottom: 20px;
     }
+
+    /* Option : logo et liens bien centrés sur petits écrans */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .nav-links a {
+        margin: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -140,9 +171,14 @@
     </div>
 
     <nav>
-      <a href="index.html">Accueil</a> |
-      <a href="services.html">Services</a> |
-      <a href="contact.html">Contact</a>
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo ATH Automotive"></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
