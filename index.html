@@ -3,127 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATH Automotive</title>
+  <title>Contact - ATH Automotive</title>
 
   <!-- Font Awesome pour les icônes réseaux -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style> 
-:root { 
-  --dark-bg: #111111; 
-  --dark-bg-alt: #1a1a1a; 
-  --accent: #e03b2d; 
-  --text-light: #ffffff; 
-  --text: #f5f5f5; 
-  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
-} 
+  <style>
+    :root {
+      --dark-bg: #111111;
+      --dark-bg-alt: #1a1a1a;
+      --accent: #e03b2d;
+      --text-light: #ffffff;
+      --text: #f5f5f5;
+      --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-body { 
-  margin: 0; 
-  padding: 0; 
-  background-color: var(--dark-bg); 
-  color: var(--text); 
-  font-family: var(--font-main); 
-  line-height: 1.6; 
-} 
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
 
-/* Top-bar */
-.top-bar { 
-  background-color: var(--dark-bg); 
-  display: flex; 
-  justify-content: flex-end; /* icônes alignées à droite */
-  align-items: center; 
-  padding: 10px 20px; 
-} 
+    /* Top-bar : réseaux sociaux alignées à droite avec espacement identique à l'accueil */
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: var(--dark-bg);
+    }
 
-.top-bar .social-icons a {
-  color: var(--text-light);
-  margin-left: 15px;
-  font-size: 18px;
-  transition: color 0.3s;
-}
+    .top-bar .social-icons a {
+      color: var(--text-light);
+      font-size: 18px;
+      margin-left: 15px; /* espacement identique */
+      transition: color 0.3s ease;
+    }
 
-.top-bar .social-icons a:hover { 
-  color: var(--accent); 
-}
+    .top-bar .social-icons a:first-child {
+      margin-left: 0; /* pas de marge pour le premier logo */
+    }
 
-/* Menu principal */
-nav {
-  background-color: var(--dark-bg-alt);
-  text-align: center;
-  padding: 15px 0;
-}
+    .top-bar .social-icons a:hover {
+      color: var(--accent);
+    }
 
-nav a {
-  color: var(--text-light);
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+    /* Menu principal */
+    nav {
+      background-color: var(--dark-bg-alt);
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #222;
+    }
 
-nav a:hover { color: var(--accent); }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-main {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
+    nav a:hover {
+      color: var(--accent);
+    }
 
-h1, h2 { color: var(--accent); }
+    /* Contenu principal */
+    main {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 20px auto;
-}
+    h1 {
+      color: var(--accent);
+      font-size: 2.2em;
+      margin-bottom: 40px;
+    }
 
-.cta-button {
-  display: inline-block;
-  padding: 15px 30px;
-  margin-top: 20px;
-  background-color: var(--accent);
-  color: var(--text-light);
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
+    h2 {
+      color: var(--accent);
+      font-size: 1.4em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
 
-.cta-button:hover { background-color: #b83223; }
+    p {
+      font-size: 16px;
+      max-width: 700px;
+      margin: 20px auto;
+      color: var(--text);
+    }
 
-</style>
+    /* Formulaire */
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      background-color: #1a1a1a;
+      color: var(--text-light);
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #aaa;
+    }
+
+    form button {
+      background-color: var(--accent);
+      color: var(--text-light);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    form button:hover {
+      background-color: #b83223;
+    }
+
+    /* Bouton prise de rendez-vous */
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background-color: var(--accent);
+      color: var(--text-light);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #b83223;
+    }
+
+  </style>
 </head>
 <body>
 
   <header>
-    <!-- Top-bar : réseaux sociaux alignées à droite -->
+    <!-- Top-bar : réseaux sociaux -->
     <div class="top-bar">
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/ath.automotive?igsh=MTJ1Y21uajQzd3Y4aA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ath.automotive" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
 
     <!-- Menu principal -->
     <nav>
-      <a href="index.html">ATH Automotive</a> |
+      <a href="index.html">Accueil</a> |
       <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h1>Bienvenue chez ATH Automotive 🚗</h1>
-    <p>Nous sommes spécialisés dans l’entretien et la réparation automobile de qualité. Notre équipe experte est à votre service pour tous vos besoins automobiles.</p>
+    <h1>Contactez-nous</h1>
+    <p>Vous avez une question ou souhaitez prendre rendez-vous ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
 
-    <h2>Nos Services</h2>
-    <p>Du diagnostic à la réparation, en passant par l’entretien complet, nous proposons des services adaptés à chaque véhicule et chaque client.</p>
+    <form action="https://formspree.io/f/xwpaebnv" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
 
-    <a class="cta-button" href="services.html">Découvrir nos services</a>
-    <a class="cta-button" href="contact.html">Nous contacter</a>
+    <h2>Ou prenez directement rendez-vous en ligne</h2>
+    <p>Utilisez le bouton ci-dessous pour voir les créneaux disponibles et réserver votre rendez-vous rapidement.</p>
+    <a class="cta-button" href="https://calendly.com/" target="_blank">Voir les créneaux</a>
   </main>
 
 </body>
