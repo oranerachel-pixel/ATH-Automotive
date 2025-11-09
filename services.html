@@ -3,150 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - ATH Automotive</title>
-
-  <!-- Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <title>Services - Mon Entreprise</title>
   <style>
-    :root {
-      --dark-bg: #111111;
-      --dark-bg-alt: #1a1a1a;
-      --accent: #e03b2d;
-      --text-light: #ffffff;
-      --text: #f5f5f5;
-      --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+   :root {
+  --dark-bg: #111111;
+  --dark-bg-alt: #1a1a1a;
+  --accent: #e03b2d;
+  --text-light: #ffffff;
+  --text: #f5f5f5;
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--dark-bg);
-      color: var(--text);
-      font-family: var(--font-main);
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
 
-    /* Barre supérieure */
-    .top-bar {
-      background-color: var(--dark-bg);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+header {
+  background-color: var(--dark-bg-alt);
+  padding: 20px 0;
+  text-align: center;
+}
 
-    .top-bar .logo {
-      height: 40px;
-    }
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
 
-    .top-bar .social-icons a {
-      color: var(--text-light);
-      margin-left: 15px;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
+nav a:hover {
+  color: var(--accent);
+}
 
-    .top-bar .social-icons a:hover {
-      color: var(--accent);
-    }
+main {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    /* Menu principal */
-    nav {
-      background-color: var(--dark-bg-alt);
-      text-align: center;
-      padding: 15px 0;
-    }
+h1, h2, h3 {
+  color: var(--accent);
+}
 
-    nav a {
-      color: var(--text-light);
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+button, .btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+button:hover, .btn:hover {
+  background-color: #b83223;
+}
 
-    main {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
+section.card {
+  background-color: #222;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
 
-    h1 {
-      color: var(--accent);
-      margin-bottom: 40px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      background-color: var(--dark-bg-alt);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-    }
-
-    .service i {
-      font-size: 40px;
-      color: var(--accent);
-      margin-bottom: 15px;
-    }
-
-    .service h3 {
-      color: var(--text-light);
-      margin-bottom: 10px;
-    }
-
-    .service p {
-      color: #ccc;
-      font-size: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: var(--accent);
-      color: var(--text-light);
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 30px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #b83223;
-    }
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
   </style>
 </head>
 <body>
-
-  <header>
     <div class="top-bar">
-      <img src="Logo ATH Automotive Fond noir.png" alt="ATH Automotive" class="logo">
+      <img src="logo.png" alt="ATH Automotive" class="logo">
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/ath.automotive?igsh=MTJ1Y21uajQzd3Y4aA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-
+  <header>
     <nav>
       <a href="index.html">ATH Automotive</a> |
       <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <main>
+    <h1>Nos Services</h1>
+    <p>Découvrez tous les services que nous proposons :</p>
+    <ul>
+      <li>Service 1 : Diagnostic automobile</li>
+      <li>Service 2 : Réparation rapide</li>
+      <li>Service 3 : Vente d’accessoires</li>
+    </ul>
+  </main>
+</body>
+</html>
