@@ -55,16 +55,10 @@
     nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end; /* plus besoin du logo */
       background-color: var(--dark-bg-alt);
       padding: 10px 20px;
       border-bottom: 1px solid #222;
-    }
-
-    nav .logo img {
-      height: 40px; /* Taille du logo rapetissé */
-      width: auto;
-      vertical-align: middle;
     }
 
     nav .menu-links {
@@ -178,13 +172,8 @@
       </div>
     </div>
 
-    <!-- Menu principal -->
+    <!-- Menu principal sans logo -->
     <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="Untitled_Artwork-1.png" alt="Logo ATH Automotive">
-        </a>
-      </div>
       <div class="menu-links">
         <a href="index.html">Accueil</a>
         <a href="services.html">Services</a>
