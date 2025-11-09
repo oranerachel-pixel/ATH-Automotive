@@ -27,14 +27,18 @@
       line-height: 1.6;
     }
 
-    /* Top-bar */
-    .top-bar {
-      background-color: var(--dark-bg);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+  .top-bar .social-icons a {
+  background-color: transparent; /* supprime tout fond */
+  color: var(--text-light);      /* couleur des icônes */
+  margin-right: 15px;            /* espace entre les icônes */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.top-bar .social-icons a:hover {
+  color: var(--accent);         /* couleur au survol */
+}
+
 
     .top-bar .logo { height: 40px; }
 
