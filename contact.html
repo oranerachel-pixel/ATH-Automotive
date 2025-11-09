@@ -52,21 +52,19 @@
       color: var(--accent);
     }
 
-    /* Barre de navigation */
+    /* Barre de navigation centrée */
     nav {
       background-color: var(--dark-bg-alt);
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 10px 40px;
       border-bottom: 1px solid #222;
     }
 
-    /* Liens de navigation */
     .nav-links {
       display: flex;
       justify-content: center;
-      flex-grow: 1;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -136,14 +134,10 @@
       margin-bottom: 20px;
     }
 
-    /* Option : liens bien centrés sur petits écrans */
+    /* Responsive pour petits écrans */
     @media (max-width: 700px) {
       nav {
         flex-direction: column;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        margin-top: 10px;
       }
       .nav-links a {
         margin: 10px;
