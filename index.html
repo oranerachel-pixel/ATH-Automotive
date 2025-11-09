@@ -17,6 +17,7 @@
   --text: #f5f5f5; 
   --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
 } 
+
 body { 
   margin: 0; 
   padding: 0; 
@@ -30,7 +31,7 @@ body {
 .top-bar { 
   background-color: var(--dark-bg); 
   display: flex; 
-  justify-content: flex-end; /* plus besoin de logo donc aligné à droite */
+  justify-content: flex-end; /* icônes alignées à droite */
   align-items: center; 
   padding: 10px 20px; 
 } 
@@ -61,9 +62,7 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover { 
-  color: var(--accent); 
-}
+nav a:hover { color: var(--accent); }
 
 main {
   padding: 60px 20px;
@@ -72,9 +71,7 @@ main {
   text-align: center;
 }
 
-h1, h2 {
-  color: var(--accent);
-}
+h1, h2 { color: var(--accent); }
 
 p {
   font-size: 18px;
@@ -94,15 +91,14 @@ p {
   transition: background-color 0.3s;
 }
 
-.cta-button:hover { 
-  background-color: #b83223; 
-}
+.cta-button:hover { background-color: #b83223; }
+
 </style>
 </head>
 <body>
 
   <header>
-    <!-- Top-bar : réseaux sociaux -->
+    <!-- Top-bar : réseaux sociaux alignées à droite -->
     <div class="top-bar">
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
