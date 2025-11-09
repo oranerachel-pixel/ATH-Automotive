@@ -10,11 +10,11 @@
 
   <style>
     :root {
-      --dark-bg: #111111;
-      --dark-bg-alt: #1a1a1a;
+      --dark-bg: #0e0e0e;
+      --dark-bg-alt: #1b1b1b;
       --accent: #e03b2d;
       --text-light: #ffffff;
-      --text: #f5f5f5;
+      --text: #e5e5e5;
       --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -27,17 +27,17 @@
       line-height: 1.6;
     }
 
-    /* Top-bar */
+    /* Top-bar avec réseaux sociaux à droite */
     .top-bar {
-      background-color: var(--dark-bg);
       display: flex;
       align-items: center;
       padding: 10px 20px;
+      background-color: var(--dark-bg);
+      border-bottom: 1px solid #222;
     }
 
-    /* Les icônes sociales à droite */
     .top-bar .social-icons {
-      margin-left: auto; /* pousse le bloc à droite */
+      margin-left: auto;
       display: flex;
     }
 
@@ -45,7 +45,7 @@
       color: var(--text-light);
       margin-left: 15px;
       font-size: 18px;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     .top-bar .social-icons a:hover {
@@ -57,28 +57,40 @@
       background-color: var(--dark-bg-alt);
       text-align: center;
       padding: 15px 0;
+      border-bottom: 1px solid #222;
     }
 
     nav a {
       color: var(--text-light);
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
+    /* Contenu principal */
     main {
       padding: 60px 20px;
-      max-width: 700px;
+      max-width: 1200px; /* même largeur que Services */
       margin: 0 auto;
       text-align: center;
     }
 
-    h1, h2 { color: var(--accent); }
+    h1 {
+      color: var(--accent);
+      font-size: 2.2em; /* même taille que Services */
+      margin-bottom: 40px;
+    }
 
-    p { font-size: 18px; margin-bottom: 20px; }
+    /* Formulaire */
+    form {
+      max-width: 700px; /* largeur identique aux services */
+      margin: 0 auto;
+    }
 
     form input, form textarea, form button {
       width: 100%;
@@ -86,6 +98,7 @@
       margin: 10px 0;
       border-radius: 5px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
 
     form button {
@@ -94,9 +107,25 @@
       border: none;
       cursor: pointer;
       transition: background-color 0.3s;
+      font-size: 16px;
     }
 
-    form button:hover { background-color: #b83223; }
+    form button:hover {
+      background-color: #b83223;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 1.4em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -111,7 +140,7 @@
     </div>
 
     <nav>
-      <a href="index.html">ATH Automotive</a> |
+      <a href="index.html">Accueil</a> |
       <a href="services.html">Services</a> |
       <a href="contact.html">Contact</a>
     </nav>
@@ -120,7 +149,6 @@
   <main>
     <h1>Contactez-nous</h1>
 
-    <!-- FORMULAIRE FREEFORMS -->
     <form action="https://formspree.io/f/xwpaebnv" method="POST">
       <input type="text" name="name" placeholder="Votre nom" required>
       <input type="email" name="email" placeholder="Votre email" required>
@@ -131,21 +159,6 @@
     <h2>Ou prenez directement rendez-vous en ligne</h2>
     <p>Utilisez le bouton en bas à droite pour voir les créneaux disponibles.</p>
   </main>
-
-  <!-- WIDGET BADGE CALENDLY -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.onload = function() {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/orane-rachel/30min',
-        text: 'Planifier un rendez-vous',
-        color: '#e03b2d',
-        textColor: '#ffffff',
-        branding: true
-      });
-    }
-  </script>
 
 </body>
 </html>
